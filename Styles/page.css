@@ -1,0 +1,174 @@
+.page {
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5vh;
+}
+.trend-but:hover{
+    box-shadow: 0 0 5px 2px gray;
+}
+@media screen and (min-width:649px)
+{
+    .trending {
+        height: 40vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+    }
+    
+    .trending-products {
+        height: 30vh;
+        width: 80vw;
+        display: flex;
+        justify-content:flex-end;
+        gap: 5vw;
+    }
+    
+    .trending-product-img {
+        max-width: 40vw;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+    }
+    
+    .trending-product-img img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .trending-product-details {
+        width: 40vw;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1vh;   
+    }
+    
+    .trending-product-details p {
+        width: 30vw;
+        height: 5vh;
+    }
+    
+    #tpd-name {
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+    
+    #tpd-bn {
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    
+    #tpd-spec {
+        font-size: 1.3rem;
+    }
+    
+    #tpd-price {
+        margin-top: 3vh;
+        font-size: 1.5rem;
+    }
+    #trend-dec{
+        height: 10.5vh;
+        width: 4vw;
+        padding: 5px;
+        background-image: url("/Assets/icons/left-right-arrows.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: none;
+    }
+    #trend-inc{
+        height: 11vh;
+        width: 4vw;
+        padding: 5px;
+        background-image: url("/Assets/icons/left-right-arrows2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: none;
+    }
+}
+
+@media screen and (max-width:649px) {
+    .trending {
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+    }
+    .trending-products {
+        height: 70vh;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5vw;
+    }
+    
+    .trending-product-img {
+        width: 40vw;
+        max-height: 40vh;
+        display: flex;
+        justify-content: end;
+        align-self: center;
+    }
+    
+    .trending-product-img img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .trending-product-details {
+        width: 40vw;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1vh;
+    }
+    
+    .trending-product-details p {
+        width: max-content;
+        height: max-content;
+        text-align: center;
+    }
+    
+    #tpd-name {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    
+    #tpd-bn {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    
+    #tpd-spec {
+        width: 70vw;
+        height: max-content;
+        font-size: 1.2rem;
+    }
+    
+    #tpd-price {
+        font-size: 1.3rem;
+    }
+    #trend-dec{
+        height: 10vh;
+        width: 5vw;
+        padding: 5px;
+    }
+    #trend-inc{
+        height: 10vh;
+        width: 5vw;
+        padding: 5px;
+    }
+}
+

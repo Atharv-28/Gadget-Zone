@@ -1,0 +1,142 @@
+@media screen and (min-width:650px) {
+    .navbar-mobile
+    {
+        display: none;
+    }
+    .navbar {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: #2874f0;
+        justify-content: space-evenly;
+        position: fixed;
+    }
+    .nav-left
+    {
+        display: flex;
+        gap: 2vw;
+    }
+    .nav-right
+    {
+        display: flex;
+        justify-content: center;
+        gap: 4vw;
+    }
+    .nav-logo
+    {
+        display: flex;
+        align-items: center;
+    }
+    .nav-logo-img
+    {
+        width: 15vw;
+        height: 10vh;
+    }
+    .nav-search
+    {
+        display: flex;
+        align-self: center;
+        height: 5vh;
+    }
+    .nav-seller
+    {
+        display: flex;
+        align-items: center;
+    }
+    .nav-seller-img
+    {
+        height: 6vh;
+        width: 4vw;
+    }
+    .nav-cart
+    {
+        display: flex;
+        align-items: center;
+    }
+    .nav-cart-img
+    {
+        height: 6vh;
+        width: 4vw;
+    }
+    .nav-profile
+    {
+        display: flex;
+        align-items: center;
+    }
+    .nav-profile-img
+    {
+        height: 6vh;
+        width: 4vw;
+    }
+}
+@media screen and (max-width:649px)
+{
+    .navbar{
+        display: none;
+    }
+    .navbar-mobile
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        background-color: #2874f0;
+        padding-bottom: 15px;
+        position: fixed;
+    }
+    .nav-top
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 8vw;
+        margin: 2vw;
+    }
+    .nav-logo
+    {
+        margin-left: -5vw;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-logo-img
+    {
+        width: 45vw;
+        height: 8vh;
+    }
+    .nav-search
+    {
+        display: flex;
+        align-self: center;
+        height: 5vh;
+    }
+    .nav-seller
+    {
+        display: flex;
+        align-items: center;
+    }
+    .nav-seller-img
+    {
+        height: 6vh;
+        width: 10vw;
+    }
+    .nav-cart
+    {
+        display: flex;
+        align-items: center;
+    }
+    .nav-cart-img
+    {
+        height: 6vh;
+        width: 10vw;
+    }
+    .nav-profile
+    {
+        display: flex;
+        align-items: center;
+    }
+    .nav-profile-img
+    {
+        height: 6vh;
+        width: 10vw;
+    }
+}
