@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./Styles/home.css">
     <link rel="stylesheet" href="./Styles/navbar.css">
     <link rel="stylesheet" href="./Styles/footer.css">
+    <link rel="stylesheet" href="./Styles/profile.css">
     <title>Gadget-Zone-Profile</title>
 </head>
 
@@ -36,9 +37,55 @@
         </div>
         <input class="nav-search" size="40" id="searchbar" onkeyup="search_product()" type="text" name="search" placeholder="Search...🔍">
     </header>
-    <div class="sa">
+    <!-- <div class="sa">
         <img src="./Assets/icons/work-in-progress-sign.png" alt="">
+    </div> -->
+    <div class="profile-page">
+        <div class="profile-page-tabs">
+            <button id="profile-but-js" class="profile-tab-button"><img class="profile-tab-icon" src="./Assets/icons/user.png" alt=""> Profile</button>
+            <a href="./cart.html" id="cart-but-js" class="profile-tab-button"><img class="profile-tab-icon" src="./Assets/icons/cart.png" alt=""> Cart</a>
+            <button id="seller-but-js" class="profile-tab-button"><img class="profile-tab-icon" src="./Assets/icons/becomeSeller.png" alt=""> Sell Product</button>
+        </div>
+        <div class="profile-page-details">
+            <div id="pppi-id-js" class="profile-page-personal-info">
+                <h1 class="profile-page-personal-info-title">Personal Information</h1>
+                <div class="pppi">
+                    <p>Name :</p>
+                    <p class="retrive-text-profile" id="show-nm"></p>
+                </div>
+                <div class="pppi">
+                    <p>User Name :</p>
+                    <p class="retrive-text-profile" id="show-un"></p>
+                </div>
+                <div class="pppi">
+                    <p>Gender :</p>
+                    <p class="retrive-text-profile" id="show-sex"></p>
+                </div>
+                <div class="pppi">
+                    <p>Email :</p>
+                    <p class="retrive-text-profile" id="show-ei"></p>
+                </div>
+                <div class="pppi">
+                    <p>Mobile No.:</p>
+                    <p class="retrive-text-profile" id="show-mn"></p>
+                </div>
+            </div>
+            <!-- <div id="spsi-js" class="profile-page-sell">
+                <h1 class="profile-page-personal-info-title">Sell Product</h1>
+            </div> -->
+        </div>
     </div>
+
+
+    
+
+
+
+
+
+
+
+
     <footer class="footer">
         <p class="about-ci">Contact info :</p>
         <div class="links">
@@ -56,6 +103,7 @@
             ©️2023 https://atharv-28.github.io/Gadget-Zone/
         </p>
     </footer>
+    <script src="./Scripts/product.js"></script>
 </body>
 
 </html>

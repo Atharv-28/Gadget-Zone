@@ -391,7 +391,6 @@ function trendingPageHandle(a) {
     document.getElementById("tpd-price").innerHTML = myProduct1[a].getPrice();
 }
 
-
 //Home Appliences cards
 
 function hapCreation(myProduct1, pro_index) {
@@ -450,3 +449,19 @@ var accproCreator = document.getElementById('accpro');
 for (let accpro_index = 28; accpro_index < 34; accpro_index++) {
     accproCreator.appendChild(hapCreation(myProduct1, accpro_index))
 }
+
+
+// tab working 
+var tab1 = document.getElementById("profile-but-js");
+var tab3 = document.getElementById("seller-but-js");
+var tab1Working = document.getElementById("pppi-id-js");
+var tab3Working = document.getElementById("spsi-js");
+tab1.addEventListener("click",function(){
+    tab1Working.style.display = "block"
+    tab3Working.style.display = "none"
+});
+tab3.addEventListener("click",function(){
+    tab1Working.style.display = "none"
+    tab3Working.style.display = "block"
+    alert("hi")
+});

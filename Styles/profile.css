@@ -1,0 +1,159 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f3f6;
+}
+.profile-tab-button:hover
+{
+    background-color: #f5faff;
+    color: #2874f0;
+}
+.profile-page
+{
+    align-self: center;
+}
+@media screen and (min-width:650px)
+{
+    .profile-page
+    {
+        width: 70vw;
+        display: flex;
+        flex-direction: row;
+        padding-top: 15vh;
+        gap: 5vw;
+        padding-bottom: 10vh;
+    }
+    .profile-page-tabs
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        width: 15vw;
+    }
+    #cart-but-js
+    {
+        height: 4vh;
+        width: 17vw;
+        padding-top: 5px;
+        text-decoration: none;
+    }
+    .profile-tab-button
+    {
+        background-color: white;
+        color: rgb(125, 125, 125);
+        font-weight: bold;
+        border: none;
+        height: 5vh;
+        width: 19vw;
+        font-size: 1.1rem;
+        text-align: left;
+        padding-left: 2vw;
+        box-shadow: 0 0 5px 2px rgb(220, 220, 220);
+    }
+    .profile-tab-icon
+    {
+        height: 2vh;
+    }
+    .profile-page-personal-info-title
+    {
+        font-size: 1.5rem;
+    }
+    .profile-page-details
+    {
+        margin-top: -3vh;
+        padding-left: 5vw;
+        padding-top: 5vh;
+        background-color: white;
+        width: 40vw;
+        padding-bottom: 5vh;
+        box-shadow: 0 0 5px 2px rgb(220, 220, 220);
+    }
+    .profile-page-personal-info
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 7vh;
+    }
+    .pppi
+    {
+        display: flex;
+        color: rgb(125, 125, 125);
+        font-size: 1.1rem;
+    }
+}
+@media screen and (max-width:649px)
+{
+    .profile-page
+    {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-top: 20vh;
+        gap: 5vw;
+        padding-bottom: 10vh;
+    }
+    .profile-page-tabs
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        width: 25vw;
+    }
+    #cart-but-js
+    {
+        height: 4vh;
+        width: 28vw;
+        padding-top: 5px;
+        text-decoration: none;
+    }
+    .profile-tab-button
+    {
+        background-color: white;
+        color: rgb(125, 125, 125);
+        font-weight: bold;
+        border: none;
+        height:5vh;
+        width: 30vw;
+        font-size: 0.7rem;
+        text-align: left;
+        padding-left: 2vw;
+        box-shadow: 0 0 5px 2px rgb(220, 220, 220);
+    }
+    .profile-tab-icon
+    {
+        height: 2vh;
+    }
+    .profile-page-personal-info-title
+    {
+        font-size: 1.1rem;
+    }
+    .profile-page-details
+    {
+        margin-top: -3vh;
+        padding-left: 5vw;
+        padding-top: 5vh;
+        background-color: white;
+        width: 65vw;
+        padding-bottom: 5vh;
+        box-shadow: 0 0 5px 2px rgb(220, 220, 220);
+    }
+    .profile-page-personal-info
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 7vh;
+    }
+    .pppi
+    {
+        display: flex;
+        color: rgb(125, 125, 125);
+        font-size: 0.8rem;
+    }
+    .retrive-text-profile
+    {
+        padding-left: 2vw;
+        font-size: 0.8rem;
+        color: rgb(100, 100, 100);
+    }
+}
