@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./Styles/footer.css">
     <link rel="stylesheet" href="./Styles/page.css">
     <link rel="stylesheet" href="./Styles/home-app.css">
-    <title>Gadget Zone</title>
+    <title>Gadget-Zone</title>
 </head>
 
 <body>
@@ -18,12 +18,14 @@
         <div class="nav-left">
             <a class="nav-logo" href="./index.html"><img class="nav-logo-img" src="./Assets/Logo/logo3.png"
                     alt="GadgetZone"></a>
-            <input class="nav-search" size="60" id="searchbar" onkeyup="search_product()" type="text" name="search"
-                placeholder="Search...🔍">
+            <div class="search-container">
+                <input class="search-input nav-search" id="searchbar" type="text" placeholder="Search...🔍">
+                <button id="search-but" class="search-button">Search</button>
+            </div>
         </div>
         <div class="nav-right">
-            <a class="nav-seller" href="./seller.html"><img class="nav-seller-img" src="./Assets/icons/becomeSeller.png"
-                    alt=""></a>
+            <a class="nav-seller" title="Become Seller" href="./seller.html"><img class="nav-seller-img"
+                    src="./Assets/icons/becomeSeller.png" alt=""></a>
             <a class="nav-cart" href="./cart.html"><img class="nav-cart-img" src="./Assets/icons/cart.png" alt=""></a>
             <a class="nav-profile" href="./profile.html"><img class="nav-profile-img" src="./Assets/icons/user.png"
                     alt=""></a>
@@ -31,35 +33,47 @@
     </header>
     <header class="navbar-mobile">
         <div class="nav-top">
-            <a class="nav-logo" href="./index.html"><img class="nav-logo-img" src="./Assets/Logo/logo3.png"alt="GadgetZone"></a>
-            <a class="nav-seller" href="./seller.html"><img class="nav-seller-img" src="./Assets/icons/becomeSeller.png" alt=""></a>
+            <a class="nav-logo" href="./index.html"><img class="nav-logo-img" src="./Assets/Logo/logo3.png"
+                    alt="GadgetZone"></a>
+            <a class="nav-seller" href="./seller.html"><img class="nav-seller-img" src="./Assets/icons/becomeSeller.png"
+                    alt=""></a>
             <a class="nav-cart" href="./cart.html"><img class="nav-cart-img" src="./Assets/icons/cart.png" alt=""></a>
-            <a class="nav-profile" href="./profile.html"><img class="nav-profile-img" src="./Assets/icons/user.png" alt=""></a>
+            <a class="nav-profile" href="./profile.html"><img class="nav-profile-img" src="./Assets/icons/user.png"
+                    alt=""></a>
         </div>
-        <input class="nav-search" size="40" id="searchbar" onkeyup="search_product()" type="text" name="search" placeholder="Search...🔍">
+        <div class="search-container">
+            <input class="search-input nav-search" id="mob-searchbar" type="text" placeholder="Search...🔍">
+            <button id="mob-search-but" class="search-button">Search</button>
+        </div>
     </header>
-    <section class="page">
-        <div class="trending">
+    <section id="page-id" class="page">
+        <div id="res-section" class="h-a-section">
+            <h4 class="sec-tit">Search Results...</h4>
+            <div id="results" class="home-appliences">
+    
+            </div>
+        </div>
+        <div id="trending-id" class="trending">
             <button class="trend-but" id="trend-dec"></button>
-            <div class="trending-products">
+            <a href="./product.html" class="trending-products">
                 <div class="trending-product-img">
                     <img id="tpi" src="" alt="">
                 </div>
                 <div class="trending-product-details">
                     <p id="tpd-bn">
-                        
+
                     </p>
                     <p id="tpd-name">
-                        
+
                     </p>
                     <p id="tpd-spec">
-                        
+
                     </p>
                     <p id="tpd-price">
-                        
+
                     </p>
                 </div>
-            </div>
+            </a>
             <button class="trend-but" id="trend-inc"></button>
         </div>
         <div class="h-a-section">

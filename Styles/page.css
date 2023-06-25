@@ -8,6 +8,9 @@
 .trend-but:hover{
     box-shadow: 0 0 5px 2px gray;
 }
+.trending-products:hover{
+    box-shadow: 0 0 5px 2px gray;
+}
 @media screen and (min-width:649px)
 {
     .trending {
@@ -20,10 +23,12 @@
     }
     
     .trending-products {
+        padding: 20px;
         height: 30vh;
         width: 80vw;
         display: flex;
         justify-content:flex-end;
+        text-decoration: none;
         gap: 5vw;
     }
     
@@ -73,23 +78,30 @@
         margin-top: 3vh;
         font-size: 1.5rem;
     }
+    .trend-but{
+        background-color: #ffff;
+    }
     #trend-dec{
         height: 10.5vh;
         width: 4vw;
         padding: 5px;
         background-image: url("/Assets/icons/left-right-arrows.png");
-        background-size: cover;
+        background-position: center;
+        background-size:5vh;
         background-repeat: no-repeat;
         border: none;
+        border-radius: 30px 0 0 30px;
     }
     #trend-inc{
         height: 11vh;
         width: 4vw;
         padding: 5px;
         background-image: url("/Assets/icons/left-right-arrows2.png");
-        background-size: cover;
+        background-position: center;
+        background-size:5vh;
         background-repeat: no-repeat;
         border: none;
+        border-radius: 0 30px 30px 0;
     }
 }
 
@@ -109,6 +121,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-decoration: none;
         gap: 5vw;
     }
     

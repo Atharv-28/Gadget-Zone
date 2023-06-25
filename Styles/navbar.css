@@ -1,8 +1,44 @@
 @media screen and (min-width:650px) {
-    .navbar-mobile
-    {
+    .navbar-mobile {
         display: none;
     }
+
+    /* Search bar container */
+    .search-container {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Search input */
+    .search-input {
+        width: 400px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    /* Search button */
+    .search-button {
+        margin-left: 10px;
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    /* Search button hover effect */
+    .search-button:hover {
+        background-color: #45a049;
+    }
+
+
+
+
+
+
+    /* mycode */
     .navbar {
         height: 10vh;
         width: 100%;
@@ -12,71 +48,71 @@
         justify-content: space-evenly;
         position: fixed;
     }
-    .nav-left
-    {
+
+    .nav-left {
         display: flex;
         gap: 2vw;
     }
-    .nav-right
-    {
+
+    .nav-right {
         display: flex;
         justify-content: center;
         gap: 4vw;
     }
-    .nav-logo
-    {
+
+    .nav-logo {
         display: flex;
         align-items: center;
     }
-    .nav-logo-img
-    {
+
+    .nav-logo-img {
         width: 15vw;
         height: 10vh;
     }
-    .nav-search
-    {
+
+    .nav-search {
         display: flex;
         align-self: center;
         height: 5vh;
     }
-    .nav-seller
-    {
+
+    .nav-seller {
         display: flex;
         align-items: center;
     }
-    .nav-seller-img
-    {
+
+    .nav-seller-img {
         height: 6vh;
         width: 4vw;
     }
-    .nav-cart
-    {
+
+    .nav-cart {
         display: flex;
         align-items: center;
     }
-    .nav-cart-img
-    {
+
+    .nav-cart-img {
         height: 6vh;
         width: 4vw;
     }
-    .nav-profile
-    {
+
+    .nav-profile {
         display: flex;
         align-items: center;
     }
-    .nav-profile-img
-    {
+
+    .nav-profile-img {
         height: 6vh;
         width: 4vw;
     }
 }
-@media screen and (max-width:649px)
-{
-    .navbar{
+
+@media screen and (max-width:649px) {
+    .navbar {
         display: none;
     }
-    .navbar-mobile
-    {
+
+    .navbar-mobile {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -85,57 +121,81 @@
         padding-bottom: 15px;
         position: fixed;
     }
-    .nav-top
-    {
+
+    .nav-top {
         display: flex;
         flex-direction: row;
         gap: 8vw;
         margin: 2vw;
     }
-    .nav-logo
-    {
+
+    .nav-logo {
         margin-left: -5vw;
         display: flex;
         justify-content: center;
     }
-    .nav-logo-img
-    {
+
+    .nav-logo-img {
         width: 45vw;
         height: 8vh;
     }
-    .nav-search
-    {
+
+    .nav-search {
         display: flex;
         align-self: center;
         height: 5vh;
     }
-    .nav-seller
-    {
+
+    .search-container {
         display: flex;
         align-items: center;
     }
-    .nav-seller-img
-    {
+
+    /* Search input */
+    .search-input {
+        width: 200px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    /* Search button */
+    .search-button {
+        margin-left: 10px;
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .nav-seller {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-seller-img {
         height: 6vh;
         width: 10vw;
     }
-    .nav-cart
-    {
+
+    .nav-cart {
         display: flex;
         align-items: center;
     }
-    .nav-cart-img
-    {
+
+    .nav-cart-img {
         height: 6vh;
         width: 10vw;
     }
-    .nav-profile
-    {
+
+    .nav-profile {
         display: flex;
         align-items: center;
     }
-    .nav-profile-img
-    {
+
+    .nav-profile-img {
         height: 6vh;
         width: 10vw;
     }
