@@ -85,7 +85,7 @@
         height: 10.5vh;
         width: 4vw;
         padding: 5px;
-        background-image: url("/Assets/icons/left-right-arrows.png");
+        background-image: url("./Assets/icons/left-right-arrows.png");
         background-position: center;
         background-size:5vh;
         background-repeat: no-repeat;
@@ -96,7 +96,7 @@
         height: 11vh;
         width: 4vw;
         padding: 5px;
-        background-image: url("/Assets/icons/left-right-arrows2.png");
+        background-image: url("./Assets/icons/left-right-arrows2.png");
         background-position: center;
         background-size:5vh;
         background-repeat: no-repeat;
