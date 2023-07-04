@@ -1,35 +1,35 @@
-@media screen and (max-width:649px)
-{
-    .h-a-section
-    {
-        margin:2vw;
+@media screen and (max-width:649px) {
+    .h-a-section {
+        margin: 2vw;
         border: 5px solid #2874f0;
         height: max-content;
         display: flex;
         flex-direction: column;
         gap: 2vw;
     }
-    .sec-tit
-    {
+
+    .sec-tit {
         background-color: #2874f0;
         color: white;
         padding-left: 2vw;
         padding-bottom: 10px;
         font-size: 1.6rem;
     }
-    .home-appliences
-    {
+
+    .home-appliences {
         display: flex;
         gap: 5vw;
+        height: 40vh;
         overflow-x: scroll;
     }
-    .section-product-anchor
-    {
-        text-decoration: none;
-        width: 30vw;
+
+    .section-product-anchor {
+        background-color: transparent;
+        border: none;
+        width: 50vw;
     }
-    .section-products
-    {
+
+    .section-products {
         margin: auto;
         padding: auto;
         height: 35vh;
@@ -38,79 +38,83 @@
         flex-direction: column;
         align-items: center;
     }
-    .section-product-img
-    {
+
+    .section-product-img {
         height: 22vh;
-        width: 15vw;
+        width: 35vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .api-img
-    {
+
+    .api-img {
         align-self: center;
-        height: 100%;
-        max-width:22vw;
+        max-height: 100%;
+        max-width: 100%;
     }
-    .section-product-details
-    {
+
+    .section-product-details {
         padding-top: 2vh;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .spd-tit
-    {
+
+    .spd-tit {
         font-size: 1.5rem;
     }
 }
-.section-product-anchor:hover
-{
+
+.section-product-anchor:hover {
     box-shadow: 0 0 5px 2px gray;
 }
-#res-section
-{
+
+#res-section {
     display: none;
 }
-#results{
+
+#results {
     display: none;
 }
-@media screen and (min-width:650px)
-{
-    .h-a-section
-    {
-        margin:2vw;
+
+@media screen and (min-width:650px) {
+    .h-a-section {
+        margin: 2vw;
         border: 5px solid #2874f0;
         height: max-content;
         display: flex;
         flex-direction: column;
         gap: 2vw;
     }
-    .sec-tit
-    {
+
+    .sec-tit {
         background-color: #2874f0;
         color: white;
         padding-left: 2vw;
         padding-bottom: 10px;
         font-size: 1.6rem;
     }
-    .home-appliences
-    {
+
+    .home-appliences {
         display: flex;
         gap: 4vw;
+        height: 40vh;
         overflow-x: scroll;
     }
-    .section-product-anchor
-    {
+
+    .section-product-anchor {
+        margin: 15px 0 15px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-decoration: none;
+        background-color: transparent;
+        border-radius: 20px;
+        border: none;
         width: 15vw;
     }
-    .section-products
-    {
+
+    .section-products {
         margin-left: 2vw;
         padding: auto;
         height: 35vh;
@@ -120,8 +124,8 @@
         justify-content: center;
         flex-direction: column;
     }
-    .section-product-img
-    {
+
+    .section-product-img {
         align-self: center;
         height: 22vh;
         width: 15vw;
@@ -129,21 +133,21 @@
         justify-content: center;
         align-items: center;
     }
-    .api-img
-    {
-        height: 100%;
-        max-width:12vw;
+
+    .api-img {
+        max-height: 100%;
+        max-width: 100%;
     }
-    .section-product-details
-    {
+
+    .section-product-details {
         align-self: center;
         padding-top: 2vh;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .spd-tit
-    {
+
+    .spd-tit {
         font-size: 1.5rem;
     }
 }
@@ -151,14 +155,14 @@
 .home-appliences::-webkit-scrollbar {
     height: 15px;
 }
-                    
+
 .home-appliences::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
-                    
+
 .home-appliences::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
     background-color: #2874f0;
 }

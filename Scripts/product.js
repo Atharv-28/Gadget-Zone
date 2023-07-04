@@ -179,27 +179,29 @@ myProduct1.push(new Product(img28, "Vengeance", "Corsair", "PC", spec28, "₹2,3
 var img29 = new Image();
 img29.src = "Assets/product-imgs/zeb-key-mouse-1.png";
 var spec29 = ["Combo ", " Pack of 2 ", " Wired"];
-myProduct1.push(new Product(img29, "Zeb-Transformer", "Zebronics", "PC", spec29, "₹1,200"));
+myProduct1.push(new Product(img29, "Zeb-Transformer", "Zebronics", "ACC", spec29, "₹1,200"));
 
 var img30 = new Image();
 img30.src = "Assets/product-imgs/zeb-key-mouse-2.png";
 var spec30 = ["Combo ", " Pack of 2 ", " Wired"];
-myProduct1.push(new Product(img30, "Zeb-Transformer", "Zebronics", "PC", spec30, "₹1,300"));
+myProduct1.push(new Product(img30, "Zeb-Transformer", "Zebronics", "ACC", spec30, "₹1,300"));
 
 var img31 = new Image();
 img31.src = "Assets/product-imgs/ant-key-mouse-1.png";
 var spec31 = ["Combo ", " Pack of 2 ", " Wired"];
-myProduct1.push(new Product(img31, "KM1600", "Ant Esports", "PC", spec31, "₹800"));
+myProduct1.push(new Product(img31, "KM1600", "Ant Esports", "ACC", spec31, "₹800"));
 
 var img32 = new Image();
 img32.src = "Assets/product-imgs/mouse-pad.png";
 var spec32 = ["Non-Slip ", " Rubber Base "];
-myProduct1.push(new Product(img32, "MP_2084K", "NOCKOUT", "PC", spec32, "₹198"));
+myProduct1.push(new Product(img32, "MP_2084K", "NOCKOUT", "ACC", spec32, "₹198"));
 
 var img33 = new Image();
 img33.src = "Assets/product-imgs/usb-hub.png";
 var spec33 = ["Usb C ", " 4 in 1 "];
-myProduct1.push(new Product(img33, "Multiport Adapter", "Bestor", "PC", spec33, "₹400"));
+myProduct1.push(new Product(img33, "Multiport Adapter", "Bestor", "ACC", spec33, "₹400"));
+
+
 
 
 
@@ -217,16 +219,14 @@ var resultsContainer = document.getElementById('results');
 var resultsContainersCont = document.getElementById('res-section');
 // For width more than 650px
 // Event listener for the search button click
-searchButton.addEventListener('click', function() {
+searchButton.addEventListener('click', function () {
     var searchTerm = searchInput.value;
     searchTerm.toLowerCase();
-    if(searchTerm.length !== 0)
-    {
+    if (searchTerm.length !== 0) {
         var results = searchProducts(searchTerm);
         displayResults(results);
     }
-    else if(searchTerm.length === 0)
-    {
+    else if (searchTerm.length === 0) {
         resultsContainersCont.style.display = "none";
     }
 });
@@ -268,19 +268,17 @@ function displayResults(results) {
 
 
 // For width less than 650px
-searchButtonMob.addEventListener('click', function() {
+searchButtonMob.addEventListener('click', function () {
     var searchTerm = searchInputMob.value;
     searchTerm.toLowerCase();
-    if(searchTerm.length !== 0)
-    {
+    if (searchTerm.length !== 0) {
         var results = searchProductsMob(searchTerm);
         displayResultsMob(results);
     }
-    else if(searchTerm.length === 0)
-    {
+    else if (searchTerm.length === 0) {
         resultsContainersCont.style.display = "none";
     }
-    
+
 });
 
 // Function to search for products based on the given search term
@@ -322,7 +320,12 @@ function displayResultsMob(results) {
 
 
 
-
+// type Variables
+var typeHA = 0;
+var typeLap = 0;
+var typeMob = 0;
+var typeComp = 0;
+var typeAcc = 0;
 
 
 
@@ -332,34 +335,59 @@ function displayResultsMob(results) {
 var trendProductArray = [];
 var i = 0;
 document.addEventListener("DOMContentLoaded", function () {
+
+
+
+    for (var re = 0; re < myProduct1.length; re++) {
+        proTypevar = myProduct1[re].getProType();
+        console.log(proTypevar);
+        if (proTypevar == "Laptop") {
+            typeLap++;
+        }
+        else if (proTypevar == "HA") {
+            typeHA += 1;
+        }
+        else if (proTypevar == "Mobiles") {
+            typeMob++;
+        }
+        else if (proTypevar == "PC") {
+            typeComp++;
+        }
+        else if (proTypevar == "ACC") {
+            typeAcc += 1;
+        }
+    }
+
+
+
     var trp1 = Math.random();
-    trp1 = trp1 * 6;
+    trp1 = trp1 * typeLap;
     trp1 = Math.floor(trp1);
 
     var trp2 = Math.random();
-    trp2 = trp2 * 10;
+    trp2 = trp2 * typeHA;
     trp2 = Math.floor(trp2);
-    trp2 += 6;
+    trp2 += typeLap;
 
     var trp3 = Math.random();
-    trp3 = trp3 * 10;
+    trp3 = trp3 * typeHA;
     trp3 = Math.floor(trp3);
-    trp3 += 6;
+    trp3 += typeLap + (typeHA / 2);
 
     var trp4 = Math.random();
-    trp4 = trp4 * 6;
+    trp4 = trp4 * typeMob;
     trp4 = Math.floor(trp4);
-    trp4 += 16;
+    trp4 += typeLap + typeHA;
 
     var trp5 = Math.random();
-    trp5 = trp5 * 6;
+    trp5 = trp5 * typeComp;
     trp5 = Math.floor(trp5);
-    trp5 += 22;
+    trp5 += typeLap + typeHA + typeMob;
 
     var trp6 = Math.random();
-    trp6 = trp6 * 5;
+    trp6 = trp6 * typeAcc;
     trp6 = Math.floor(trp6);
-    trp6 += 28
+    trp6 += typeLap + typeHA + typeMob + typeComp;
 
     trendProductArray.push(trp1);
     trendProductArray.push(trp2);
@@ -382,7 +410,6 @@ document.getElementById("trend-inc").addEventListener("click", function () {
     }
 })
 function trendingPageHandle(a) {
-    console.log(a);
     var j = a;
     document.getElementById("tpi").src = myProduct1[a].getProImg();
     document.getElementById("tpd-bn").innerHTML = myProduct1[a].getBrandName();
@@ -390,11 +417,10 @@ function trendingPageHandle(a) {
     document.getElementById("tpd-spec").innerHTML = myProduct1[a].getSpecification();
     document.getElementById("tpd-price").innerHTML = myProduct1[a].getPrice();
 }
-
 //Home Appliences cards
 
 function hapCreation(myProduct1, pro_index) {
-    var secProA = document.createElement('a');
+    var secProA = document.createElement('button');
     var secPro = document.createElement('div');
     var imgDiv = document.createElement('div');
     var detailsDiv = document.createElement('div');
@@ -411,8 +437,7 @@ function hapCreation(myProduct1, pro_index) {
     titPro.classList.add('spd-tit');
     priPro.classList.add('spd-pri');
 
-    secProA.href = "product.html"
-    secProA.target = "_blank"
+    // secProA.onclick = openPop()
     imgPro.src = myProduct1[pro_index].getProImg();
     titPro.textContent = myProduct1[pro_index].getName();
     priPro.textContent = myProduct1[pro_index].getPrice();
@@ -429,39 +454,113 @@ function hapCreation(myProduct1, pro_index) {
     return secProA;
 }
 
-var haproCreator = document.getElementById('hapro');
-for (let hap_index = 6; hap_index < 16; hap_index++) {
-    haproCreator.appendChild(hapCreation(myProduct1, hap_index))
-}
-var laproCreator = document.getElementById('lapro');
-for (let lap_index = 0; lap_index < 6; lap_index++) {
-    laproCreator.appendChild(hapCreation(myProduct1, lap_index))
-}
-var mobproCreator = document.getElementById('mobpro');
-for (let mob_index = 16; mob_index < 22; mob_index++) {
-    mobproCreator.appendChild(hapCreation(myProduct1, mob_index));
-}
-var cocoproCreator = document.getElementById('cocopro');
-for (let cocopro_index = 22; cocopro_index < 28; cocopro_index++) {
-    cocoproCreator.appendChild(hapCreation(myProduct1, cocopro_index));
-}
-var accproCreator = document.getElementById('accpro');
-for (let accpro_index = 28; accpro_index < 34; accpro_index++) {
-    accproCreator.appendChild(hapCreation(myProduct1, accpro_index))
-}
 
 
-// tab working 
-var tab1 = document.getElementById("profile-but-js");
-var tab3 = document.getElementById("seller-but-js");
-var tab1Working = document.getElementById("pppi-id-js");
-var tab3Working = document.getElementById("spsi-js");
-tab1.addEventListener("click",function(){
-    tab1Working.style.display = "block"
-    tab3Working.style.display = "none"
-});
-tab3.addEventListener("click",function(){
-    tab1Working.style.display = "none"
-    tab3Working.style.display = "block"
-    alert("hi")
-});
+document.addEventListener("DOMContentLoaded", function () {
+    var laproCreator = document.getElementById('lapro');
+    for (let lap_index = 0; lap_index < typeLap; lap_index++) {
+        laproCreator.appendChild(hapCreation(myProduct1, lap_index))
+    }
+    var haproCreator = document.getElementById('hapro');
+    for (let hap_index = typeLap; hap_index < typeHA + typeLap; hap_index++) {
+        console.log(typeLap)
+        haproCreator.appendChild(hapCreation(myProduct1, hap_index))
+    }
+    var mobproCreator = document.getElementById('mobpro');
+    for (let mob_index = (typeLap + typeHA); mob_index < typeLap + typeHA + typeMob; mob_index++) {
+        mobproCreator.appendChild(hapCreation(myProduct1, mob_index));
+    }
+    var cocoproCreator = document.getElementById('cocopro');
+    for (let cocopro_index = typeHA + typeLap + typeMob; cocopro_index < typeHA + typeLap + typeMob + typeComp; cocopro_index++) {
+        cocoproCreator.appendChild(hapCreation(myProduct1, cocopro_index));
+    }
+    var accproCreator = document.getElementById('accpro');
+    for (let accpro_index = typeComp + typeHA + typeLap + typeMob; accpro_index < typeComp + typeHA + typeLap + typeMob + typeAcc; accpro_index++) {
+        accproCreator.appendChild(hapCreation(myProduct1, accpro_index))
+    }
+
+    // // tab working 
+    // var tab1 = document.getElementById("profile-but-js");
+    // var tab3 = document.getElementById("seller-but-js");
+    // var tab1Working = document.querySelector("#pppi-id-js");
+    // var tab3Working = document.querySelector("#spsi-js");
+    // tab1.addEventListener("click", function () {
+    //     tab1Working.style.display = "block"
+    //     tab3Working.style.display = "none"
+    // });
+    // tab3.addEventListener("click", function () {
+    //     // tab1Working.style.display = "none"
+    //     tab1Working.style.display = "none"
+    //     tab3Working.style.display = "inline-block"
+    // });
+    var popShow = document.getElementById("p-p");
+    var productButton = document.querySelectorAll(".section-product-anchor");
+    for (let proI = 0; proI < productButton.length; proI++) {
+        var clicBut = productButton[proI];
+
+        clicBut.addEventListener("click", function () {
+            popShow.style.display = "block"
+            // alert("daws")
+            // var fi = clicBut.querySelector('.pro-img-pro-page').src
+            // var fb = clicBut.querySelector(".fetch-brand")
+            // var ft = clicBut.querySelector(".fetch-tit")
+            // var fs = clicBut.querySelector(".fetch-spec")
+            // var fp = clicBut.querySelector(".fetch-price")
+            console.log(myProduct1[proI])
+            var fi = document.querySelector(".pro-img-pro-page")
+            var fb = document.querySelector(".fetch-brand")
+            var ft = document.querySelector(".fetch-tit")
+            var fs = document.querySelector(".fetch-spec")
+            var fp = document.querySelector(".fetch-price")
+            fi.src = myProduct1[proI].getProImg()
+            fb.innerText = myProduct1[proI].getBrandName()
+            ft.innerText = myProduct1[proI].getName()
+            fs.innerText = myProduct1[proI].getSpecification()
+            fp.innerText = myProduct1[proI].getPrice()
+            console.log(myProduct1[proI].getProImg())
+
+            var bN = document.querySelector("buy-now")
+            bN.addEventListener("click", function () {
+                alert("Service Not Available !!")
+            })
+
+            var closePop = document.getElementById("c-b");
+            closePop.addEventListener("click", function () {
+                popShow.style.display = "none"
+            })
+        })
+
+
+    }
+
+})
+
+
+
+
+
+
+
+
+// // tab working
+// var tab1 = document.getElementById("profile-but-js");
+// var tab3 = document.getElementById("seller-but-js");
+// var tab1Working = document.querySelector("#pppi-id-js");
+// var tab3Working = document.querySelector("#spsi-js");
+// tab1.addEventListener("click",function(){
+//     tab1Working.style.display = "block"
+//     tab3Working.style.display = "none"
+// });
+// tab3.addEventListener("click",function(){
+//     console.log("hi")
+//     // tab1Working.style.display = "none"
+//     // tab3Working.style.display = "block"
+//     // alert("hi")
+// });
+
+
+// function hi(){
+//     tab1Working.style.display = "none"
+//     tab3Working.style.display = "block"
+//     alert("hi")
+// }

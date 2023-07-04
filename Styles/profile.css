@@ -81,6 +81,10 @@ body{
         font-size: 1.1rem;
     }
 }
+.butt-toggle
+{
+    display: none;
+}
 @media screen and (max-width:649px)
 {
     .profile-page
