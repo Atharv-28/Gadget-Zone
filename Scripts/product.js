@@ -519,7 +519,11 @@ document.addEventListener("DOMContentLoaded", function () {
             fp.innerText = myProduct1[proI].getPrice()
             console.log(myProduct1[proI].getProImg())
 
-            var bN = document.querySelector("buy-now")
+            var bN = document.querySelector(".buy-now")
+            var aC = document.querySelector(".addtoCart")
+            aC.addEventListener("click", function () {
+                alert("Service Not Available !!")
+            })
             bN.addEventListener("click", function () {
                 alert("Service Not Available !!")
             })

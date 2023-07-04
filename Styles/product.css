@@ -92,7 +92,8 @@ body {
     }
 
     .pro-img-pro-page {
-        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
     }
 
     .product-page-details {
@@ -168,8 +169,8 @@ body {
     }
 
     .pro-img-pro-page {
-        width: 80%;
-        height: fit-content;
+        max-width: 80%;
+        max-height: 100%;
     }
 
     .product-page-details {
