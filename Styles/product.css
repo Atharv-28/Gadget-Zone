@@ -15,13 +15,27 @@
     /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
     padding-top: 60px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+    from {
+        top: -200px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 
 body {
@@ -29,6 +43,10 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10vh;
+}
+
+.fetch-price {
+    font-weight: bold;
 }
 
 #p-p {
@@ -68,7 +86,7 @@ body {
 @media screen and (max-width:649px) {
     .product-page {
         width: 80vw;
-        height: 60vh;
+        height: 65vh;
         display: flex;
         flex-direction: column;
         align-self: center;
@@ -121,12 +139,12 @@ body {
 
     .buy-now {
         width: 35vw;
-        height: 5vh;
+        height: 6vh;
     }
 
     .addtoCart {
         width: 35vw;
-        height: 5vh;
+        height: 6vh;
     }
 
     .pro-but-logo {
@@ -139,7 +157,6 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background-color: white;
 }
 
 @media screen and (min-width:650px) {

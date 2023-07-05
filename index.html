@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./Styles/navbar.css">
     <link rel="stylesheet" href="./Styles/footer.css">
     <link rel="stylesheet" href="./Styles/page.css">
+    <link rel="stylesheet" href="./Styles/cart.css">
     <link rel="stylesheet" href="./Styles/home-app.css">
     <title>Gadget-Zone</title>
 </head>
@@ -27,7 +28,7 @@
         <div class="nav-right">
             <a class="nav-seller" title="Become Seller"><img class="nav-seller-img"
                     src="./Assets/icons/becomeSeller.png" alt=""></a>
-            <a class="nav-cart"><img class="nav-cart-img" src="./Assets/icons/cart.png" alt=""></a>
+            <a id="cart-but" class="nav-cart"><img class="nav-cart-img" src="./Assets/icons/cart.png" alt=""></a>
             <a class="nav-profile"><img class="nav-profile-img" src="./Assets/icons/user.png" alt=""></a>
         </div>
     </header>
@@ -134,9 +135,26 @@
             </div>
         </div>
         <div id="c-p" class="cart-pop">
-            <button id="cc-b" class="close-but">
-
-            </button>
+            <button id="cc-b" class="close-but"></button>
+            <div class="cart-page">
+                <h5 class="cart-page-title">Cart</h5>
+                <div class="cart-container">
+                    <button class="indi-cart-pro">
+                        <img src="./Assets/product-imgs/acer-monitor.png" alt="" class="cart-pro-img">
+                        <div class="cart-pro-det">
+                            <p class="cart-pro-br-name">Acer-Monitor</p>
+                            <p class="cart-pro-spec">fsdjkgemd</p>
+                            <p class="cart-pro-price">$32200</p>
+                        </div>
+                        <a class="cart-pro-del"><img src="./Assets/icons/delete.png" alt="" class="cart-pro-del-img">
+                        </a>
+                    </button>
+                </div>
+                <div class="cart-page-end">
+                    <h5 class="cart-page-end">Total =</h5>
+                    <button class="p-o"><img src="./Assets/icons/buy.png" alt="">Place Orders</button>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -26,6 +26,36 @@ class Product {
         return this.price;
     }
 }
+
+
+class Cart {
+    constructor(proImg, name, brandName, productType, specification, price) {
+        this.proImg = proImg;
+        this.name = name;
+        this.brandName = brandName;
+        this.productType = productType;
+        this.specification = specification;
+        this.price = price;
+    }
+    getProImg() {
+        return this.proImg.src;
+    }
+    getName() {
+        return this.name;
+    }
+    getBrandName() {
+        return this.brandName;
+    }
+    getProType() {
+        return this.productType;
+    }
+    getSpecification() {
+        return this.specification;
+    }
+    getPrice() {
+        return this.price;
+    }
+}
 //Adding Products 
 
 //Laptops
@@ -251,8 +281,8 @@ function searchProducts(searchTerm) {
 function displayResults(results) {
     // Clear previous results
     resultsContainer.innerHTML = '';
-    resultsContainersCont.style.display = "inline-block";
-    resultsContainer.style.display = "inline-block";
+    resultsContainersCont.style.display = "inline";
+    resultsContainer.style.display = "inline";
     if (results.length === 0) {
         alert("No result found")
         resultsContainer.textContent = 'No results found.';
@@ -396,7 +426,11 @@ document.addEventListener("DOMContentLoaded", function () {
     trendProductArray.push(trp5);
     trendProductArray.push(trp6);
     trendingPageHandle(trendProductArray[i]);
+
+
+
 })
+
 document.getElementById("trend-dec").addEventListener("click", function () {
     if (i > 0) {
         i -= 1;
@@ -493,54 +527,69 @@ document.addEventListener("DOMContentLoaded", function () {
     //     tab1Working.style.display = "none"
     //     tab3Working.style.display = "inline-block"
     // });
+    function openProduct(proI) {
+        popShow.style.display = "block"
+        // alert("daws")
+        // var fi = clicBut.querySelector('.pro-img-pro-page').src
+        // var fb = clicBut.querySelector(".fetch-brand")
+        // var ft = clicBut.querySelector(".fetch-tit")
+        // var fs = clicBut.querySelector(".fetch-spec")
+        // var fp = clicBut.querySelector(".fetch-price")
+        console.log(myProduct1[proI])
+        var fi = document.querySelector(".pro-img-pro-page")
+        var fb = document.querySelector(".fetch-brand")
+        var ft = document.querySelector(".fetch-tit")
+        var fs = document.querySelector(".fetch-spec")
+        var fp = document.querySelector(".fetch-price")
+        fi.src = myProduct1[proI].getProImg()
+        fb.innerText = myProduct1[proI].getBrandName()
+        ft.innerText = myProduct1[proI].getName()
+        fs.innerText = myProduct1[proI].getSpecification()
+        fp.innerText = myProduct1[proI].getPrice()
+        console.log(myProduct1[proI].getProImg())
+
+
+        var aC = document.querySelector(".addtoCart")
+        aC.addEventListener("click", function () {
+            var myCart = [new Cart(myProduct1[proI].getProImg(), myProduct1[proI].getName(), myProduct1[proI].getBrandName(), myProduct1[proI].getProType(), myProduct1[proI].getSpecification(), myProduct1[proI].getPrice())]
+            console.log(myCart)
+        })
+        var closePop = document.getElementById("c-b");
+        closePop.addEventListener("click", function () {
+            popShow.style.display = "none"
+        })
+    }
+
     var popShow = document.getElementById("p-p");
     var productButton = document.querySelectorAll(".section-product-anchor");
     for (let proI = 0; proI < productButton.length; proI++) {
         var clicBut = productButton[proI];
 
         clicBut.addEventListener("click", function () {
-            popShow.style.display = "block"
-            // alert("daws")
-            // var fi = clicBut.querySelector('.pro-img-pro-page').src
-            // var fb = clicBut.querySelector(".fetch-brand")
-            // var ft = clicBut.querySelector(".fetch-tit")
-            // var fs = clicBut.querySelector(".fetch-spec")
-            // var fp = clicBut.querySelector(".fetch-price")
-            console.log(myProduct1[proI])
-            var fi = document.querySelector(".pro-img-pro-page")
-            var fb = document.querySelector(".fetch-brand")
-            var ft = document.querySelector(".fetch-tit")
-            var fs = document.querySelector(".fetch-spec")
-            var fp = document.querySelector(".fetch-price")
-            fi.src = myProduct1[proI].getProImg()
-            fb.innerText = myProduct1[proI].getBrandName()
-            ft.innerText = myProduct1[proI].getName()
-            fs.innerText = myProduct1[proI].getSpecification()
-            fp.innerText = myProduct1[proI].getPrice()
-            console.log(myProduct1[proI].getProImg())
-
-            var bN = document.querySelector(".buy-now")
-            var aC = document.querySelector(".addtoCart")
-            aC.addEventListener("click", function () {
-                alert("Service Not Available !!")
-            })
-            bN.addEventListener("click", function () {
-                alert("Service Not Available !!")
-            })
-
-            var closePop = document.getElementById("c-b");
-            closePop.addEventListener("click", function () {
-                popShow.style.display = "none"
-            })
+            openProduct(proI);
         })
 
 
     }
+    var tpClick = document.getElementById("t-p")
+    tpClick.addEventListener("click", function () {
+        var pv = trendProductArray[i];
+        openProduct(pv);
+    })
 
+})
+var showCart = document.getElementById("c-p")
+var cB = document.document.getElementById("cart-but")
+cB.addEventListener("click", function () {
+    showCart.style.display = "block";
 })
 
 
+var bN = document.querySelector(".buy-now")
 
+bN.addEventListener("click", function () {
+    alert("Service Not Available !!")
+})
 
 
 

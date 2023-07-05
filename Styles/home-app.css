@@ -18,8 +18,8 @@
 
     .home-appliences {
         display: flex;
-        gap: 5vw;
-        height: 40vh;
+        gap: 10vw;
+        height: 45vh;
         overflow-x: scroll;
     }
 
@@ -115,7 +115,6 @@
     }
 
     .section-products {
-        margin-left: 2vw;
         padding: auto;
         height: 35vh;
         width: 15vw;
