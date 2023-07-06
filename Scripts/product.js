@@ -233,7 +233,13 @@ myProduct1.push(new Product(img33, "Multiport Adapter", "Bestor", "ACC", spec33,
 
 
 
-
+//Animation 
+function buttonAnimation(Vari) {
+    Vari.classList.add("pressed");
+    setTimeout(function () {
+        Vari.classList.remove("pressed");
+    }, 500);
+}
 
 
 
@@ -487,6 +493,52 @@ function hapCreation(myProduct1, pro_index) {
 
     return secProA;
 }
+// Cart pro 
+
+function cartCreation(myCart, pro_index) {
+    var secProA = document.createElement('button');
+    var imgPro = document.createElement('img');
+    var secProDet = document.createElement('div');
+    var titPro = document.createElement('p');
+    var specPro = document.createElement('p');
+    var priPro = document.createElement('p');
+    var delPro = document.createElement('a');
+    var delImg = document.createElement('img');
+
+    // var temp = myCart[pro_index];
+
+    secProA.classList.add('indi-cart-pro')
+    secProA.id = "indi-cart-id"
+    imgPro.classList.add("cart-pro-img")
+    secProDet.classList.add("cart-pro-det")
+    titPro.classList.add("cart-pro-br-name")
+    specPro.classList.add("cart-pro-spec")
+    priPro.classList.add("cart-pro-price")
+    delPro.classList.add("cart-pro-del")
+    delImg.classList.add("cart-pro-del-img")
+
+    // imgPro.src = ".";
+    titPro.textContent = myCart[pro_index].getName();
+    specPro.textContent = myCart[pro_index].getSpecification();
+    priPro.textContent = myCart[pro_index].getPrice();
+    delImg.src = "./Assets/icons/delete.png";
+
+    secProDet.appendChild(titPro);
+    secProDet.appendChild(specPro);
+    secProDet.appendChild(priPro);
+    delPro.appendChild(delImg);
+
+    secProA.appendChild(imgPro);
+    secProA.appendChild(secProDet);
+    secProA.appendChild(delPro);
+
+    return secProA;
+}
+
+
+
+
+
 
 
 
@@ -513,29 +565,10 @@ document.addEventListener("DOMContentLoaded", function () {
         accproCreator.appendChild(hapCreation(myProduct1, accpro_index))
     }
 
-    // // tab working 
-    // var tab1 = document.getElementById("profile-but-js");
-    // var tab3 = document.getElementById("seller-but-js");
-    // var tab1Working = document.querySelector("#pppi-id-js");
-    // var tab3Working = document.querySelector("#spsi-js");
-    // tab1.addEventListener("click", function () {
-    //     tab1Working.style.display = "block"
-    //     tab3Working.style.display = "none"
-    // });
-    // tab3.addEventListener("click", function () {
-    //     // tab1Working.style.display = "none"
-    //     tab1Working.style.display = "none"
-    //     tab3Working.style.display = "inline-block"
-    // });
+    var myCart;
+
     function openProduct(proI) {
         popShow.style.display = "block"
-        // alert("daws")
-        // var fi = clicBut.querySelector('.pro-img-pro-page').src
-        // var fb = clicBut.querySelector(".fetch-brand")
-        // var ft = clicBut.querySelector(".fetch-tit")
-        // var fs = clicBut.querySelector(".fetch-spec")
-        // var fp = clicBut.querySelector(".fetch-price")
-        console.log(myProduct1[proI])
         var fi = document.querySelector(".pro-img-pro-page")
         var fb = document.querySelector(".fetch-brand")
         var ft = document.querySelector(".fetch-tit")
@@ -546,12 +579,11 @@ document.addEventListener("DOMContentLoaded", function () {
         ft.innerText = myProduct1[proI].getName()
         fs.innerText = myProduct1[proI].getSpecification()
         fp.innerText = myProduct1[proI].getPrice()
-        console.log(myProduct1[proI].getProImg())
 
 
         var aC = document.querySelector(".addtoCart")
         aC.addEventListener("click", function () {
-            var myCart = [new Cart(myProduct1[proI].getProImg(), myProduct1[proI].getName(), myProduct1[proI].getBrandName(), myProduct1[proI].getProType(), myProduct1[proI].getSpecification(), myProduct1[proI].getPrice())]
+            myCart = [new Cart(myProduct1[proI].getProImg(), myProduct1[proI].getName(), myProduct1[proI].getBrandName(), myProduct1[proI].getProType(), myProduct1[proI].getSpecification(), myProduct1[proI].getPrice())]
             console.log(myCart)
         })
         var closePop = document.getElementById("c-b");
@@ -576,19 +608,46 @@ document.addEventListener("DOMContentLoaded", function () {
         var pv = trendProductArray[i];
         openProduct(pv);
     })
+    function clickedCart() {
+        var jsf = myCart.length;
+        console.log(jsf);
+        if (jsf > 0) {
+            var addCart = document.getElementById("a-c-c")
+            for (let index = 0; index < jsf; index++) {
+                addCart.appendChild(cartCreation(myCart, index));
+            }
+        }
+        showCart.style.display = "block";
+    }
+    var cBM = document.getElementById("c-p-m")
 
-})
-var showCart = document.getElementById("c-p")
-var cB = document.document.getElementById("cart-but")
-cB.addEventListener("click", function () {
-    showCart.style.display = "block";
-})
+    var showCart = document.getElementById("c-p")
+    var cB = document.getElementById("cart-but")
+    cB.addEventListener("click", function () {
+        buttonAnimation(cB);
+        clickedCart();
+        // showCart.style.display = "block";
+    })
+    cBM.addEventListener("click", function () {
+        buttonAnimation(cBM)
+        clickedCart();
+        // showCart.style.display = "block";
+    })
+
+    var ccB = document.getElementById("cc-b")
+    ccB.addEventListener("click", function () {
+        showCart.style.display = "none";
+    })
 
 
-var bN = document.querySelector(".buy-now")
 
-bN.addEventListener("click", function () {
-    alert("Service Not Available !!")
+    var bN = document.querySelector(".buy-now")
+
+    bN.addEventListener("click", function () {
+        buttonAnimation(bN)
+        alert("Service Not Available !!")
+    })
+
 })
 
 

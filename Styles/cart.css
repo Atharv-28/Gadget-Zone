@@ -2,6 +2,10 @@
     display: none;
 }
 
+.close-but:hover {
+    box-shadow: 0 0 5px 5px white;
+}
+
 .cart-pop {
     position: fixed;
     /* Stay in place */
