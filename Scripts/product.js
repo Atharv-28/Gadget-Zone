@@ -360,6 +360,16 @@ function displayResultsMob(results) {
 
 
 
+function plClicked() {
+    var plOr = document.getElementById("p-o-id");
+    plOr.classList.add("pressedpo")
+    setTimeout(function () {
+        plOr.classList.remove("pressedpo");
+    }, 100)
+}
+
+
+
 
 
 // type Variables
@@ -590,8 +600,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(proI);
             var tmpImg = "img" + (proI + 1) + ".src";
             var tmpImg2 = eval(tmpImg);
-           // tmpImg2 = tmpImg2.substring(21);
-           // tmpImg2 = "." + tmpImg2;
+            tmpImg2 = tmpImg2.substring(21);
+            tmpImg2 = "." + tmpImg2;
             console.log(tmpImg2);
             // console.log(img20);
             var tmpImgC = new Image();
@@ -692,9 +702,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     bN.addEventListener("click", function () {
         buttonAnimation(bN)
-        alert("Service Not Available !!")
+        alert("Service Not Available !! ")
     })
+    function openCartProduct(proI) {
+        popShow.style.display = "block"
+        var fi = document.querySelector(".pro-img-pro-page")
+        var fb = document.querySelector(".fetch-brand")
+        var ft = document.querySelector(".fetch-tit")
+        var fs = document.querySelector(".fetch-spec")
+        var fp = document.querySelector(".fetch-price")
+        fi.src = myCart[proI].getProImg()
+        fb.innerText = myCart[proI].getBrandName()
+        ft.innerText = myCart[proI].getName()
+        fs.innerText = myCart[proI].getSpecification()
+        fp.innerText = myCart[proI].getPrice()
 
+
+        var aC = document.querySelector(".addtoCart")
+        aC.addEventListener("click", function () {
+            alert("Already added to cart !!");
+        })
+        var closePop = document.getElementById("c-b");
+        closePop.addEventListener("click", function () {
+            popShow.style.display = "none"
+        })
+    }
 })
 
 
