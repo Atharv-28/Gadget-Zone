@@ -360,6 +360,9 @@ function displayResultsMob(results) {
 
 
 
+
+
+
 function plClicked() {
     var plOr = document.getElementById("p-o-id");
     plOr.classList.add("pressedpo")
@@ -601,9 +604,9 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(proI);
             var tmpImg = "img" + (proI + 1) + ".src";
             var tmpImg2 = eval(tmpImg);
-           //tmpImg2 = tmpImg2.substring(21);
-           // tmpImg2 = "." + tmpImg2;
-          //  console.log(tmpImg2);
+            tmpImg2 = tmpImg2.substring(21);
+            tmpImg2 = "." + tmpImg2;
+            console.log(tmpImg2);
             // console.log(img20);
             var tmpImgC = new Image();
             tmpImgC.src = tmpImg2;
@@ -616,6 +619,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var popShow = document.getElementById("p-p");
+
+
     var productButton = document.querySelectorAll(".section-product-anchor");
     for (let proI = 0; proI < productButton.length; proI++) {
         var clicBut = productButton[proI];
@@ -676,6 +681,41 @@ document.addEventListener("DOMContentLoaded", function () {
         // }
         editTotPrice.textContent = "Total = ₹" + totPrice;
         showCart.style.display = "block";
+        document.querySelector("#p-o-id").addEventListener("click", function () {
+            alert("Service Not Available");
+        })
+        function openCartProduct(proI) {
+            showCart.style.display = "none"
+            popShow.style.display = "block"
+            var fi = document.querySelector(".pro-img-pro-page")
+            var fb = document.querySelector(".fetch-brand")
+            var ft = document.querySelector(".fetch-tit")
+            var fs = document.querySelector(".fetch-spec")
+            var fp = document.querySelector(".fetch-price")
+            fi.src = myCart[proI].getProImg()
+            fb.innerText = myCart[proI].getBrandName()
+            ft.innerText = myCart[proI].getName()
+            fs.innerText = myCart[proI].getSpecification()
+            fp.innerText = myCart[proI].getPrice()
+
+
+            var aC = document.querySelector(".addtoCart")
+            aC.addEventListener("click", function () {
+                alert("Already added to cart !!");
+            })
+            var closePop = document.getElementById("c-b");
+            closePop.addEventListener("click", function () {
+                popShow.style.display = "none"
+            })
+        }
+        var cartPro = document.querySelectorAll(".indi-cart-pro");
+        for (let cartI = 0; cartI < cartPro.length; cartI++) {
+            var clickCartPro = cartPro[cartI];
+            clickCartPro.addEventListener("click", function () {
+                console.log(cartI)
+                openCartProduct(cartI);
+            })
+        }
     }
     var cBM = document.getElementById("c-p-m")
 
@@ -705,29 +745,7 @@ document.addEventListener("DOMContentLoaded", function () {
         buttonAnimation(bN)
         alert("Service Not Available !! ")
     })
-    function openCartProduct(proI) {
-        popShow.style.display = "block"
-        var fi = document.querySelector(".pro-img-pro-page")
-        var fb = document.querySelector(".fetch-brand")
-        var ft = document.querySelector(".fetch-tit")
-        var fs = document.querySelector(".fetch-spec")
-        var fp = document.querySelector(".fetch-price")
-        fi.src = myCart[proI].getProImg()
-        fb.innerText = myCart[proI].getBrandName()
-        ft.innerText = myCart[proI].getName()
-        fs.innerText = myCart[proI].getSpecification()
-        fp.innerText = myCart[proI].getPrice()
 
-
-        var aC = document.querySelector(".addtoCart")
-        aC.addEventListener("click", function () {
-            alert("Already added to cart !!");
-        })
-        var closePop = document.getElementById("c-b");
-        closePop.addEventListener("click", function () {
-            popShow.style.display = "none"
-        })
-    }
 })
 
 
