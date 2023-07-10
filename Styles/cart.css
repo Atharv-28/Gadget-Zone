@@ -11,17 +11,19 @@
 }
 
 .indi-cart-pro:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
     scale: 1.01;
 }
 
 .p-o:hover {
     scale: 1.1;
-    box-shadow: 0 0 5px 2px black;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
 
 .pressedpo {
     opacity: 0.5;
-    box-shadow: 0 0 5px 2px white;
+    /* box-shadow: 0 0 5px 2px white; */
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
 .cart-pop {
@@ -142,7 +144,7 @@
         align-items: center;
         justify-content: space-around;
         border-radius: 40px;
-        box-shadow: 0 0 5px 2px gray;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
         border: none;
     }
 
@@ -274,7 +276,7 @@
         align-items: center;
         justify-content: space-around;
         border-radius: 50px;
-        box-shadow: 0 0 5px 2px gray;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
         border: none;
     }
 

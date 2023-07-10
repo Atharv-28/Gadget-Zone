@@ -66,6 +66,10 @@
     }
 }
 
+.section-product-anchor {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
 .section-product-anchor:hover {
     box-shadow: 0 0 5px 2px gray;
     scale: 1.1;

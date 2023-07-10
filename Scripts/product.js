@@ -239,7 +239,7 @@ function buttonAnimation(Vari) {
     Vari.classList.add("pressed");
     setTimeout(function () {
         Vari.classList.remove("pressed");
-    }, 500);
+    }, 150);
 }
 
 
@@ -597,11 +597,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var aC = document.querySelector(".addtoCart")
         aC.addEventListener("click", function () {
+            buttonAnimation(aC)
             console.log(proI);
             var tmpImg = "img" + (proI + 1) + ".src";
             var tmpImg2 = eval(tmpImg);
-           // tmpImg2 = tmpImg2.substring(21);
-           // tmpImg2 = "." + tmpImg2;
+            tmpImg2 = tmpImg2.substring(21);
+            tmpImg2 = "." + tmpImg2;
             console.log(tmpImg2);
             // console.log(img20);
             var tmpImgC = new Image();
